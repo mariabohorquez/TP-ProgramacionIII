@@ -32,6 +32,10 @@ void dfs_ejemplo() {
   dfs.correr_dfs(0);
 }
 
+void kruskal_ejemplo() {
+
+}
+
 int main()
 {
   std::cout << "Escoja el ejemplo a correr" << std::endl
@@ -46,5 +50,11 @@ int main()
   }
   else if (opcion == 2) {
     dfs_ejemplo();
+  }
+  else if (opcion == 3) {
+    kruskal_ejemplo();
+  }
+  else {
+    std::cout << "Opcion invalida, intenta de nuevo";
   }
 }
