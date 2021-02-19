@@ -42,3 +42,14 @@ Interpretación del criterio de selección:
 Comienza con un bosque cuyos árboles son los vértices del grafo. 
 En cada paso, selecciona la arista de mínimo costo que conecta dos arboles distintos. 
 Termina cuando el bosque tiene un solo árbol.
+
+### Imagenes de los grafos en los ejemplos
+
+- Grafo simple usado en BSF y DFS:
+<img src="grafo-simple.jpg" width="300" height="250"/>
+Fuente: 
+
+- Grafo con costos para el ejemplo de Kruskal:
+<img src="grafo-kruskal.png" width="300" height="250"/>
+Fuente: https://www.gatevidyalay.com/kruskals-algorithm-kruskals-algorithm-example/
+
