@@ -15,7 +15,6 @@ struct conexion {
 	}
 };
 
-
 class GrafoConCosto
 {
   public:
@@ -25,10 +24,6 @@ class GrafoConCosto
     {
       _n = nodos;
       conexiones = aristas;
-    }
-
-    void imprimir() 
-    {
     }
 
     inline int len() { return _n; }

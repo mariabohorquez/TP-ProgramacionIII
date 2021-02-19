@@ -1,6 +1,9 @@
 #include "include/grafo.h"
+#include "include/grafo_con_costo.h"
+
 #include "include/bfs.h"
 #include "include/dfs.h"
+#include "include/kruskal.h"
 
 #include <iostream>
 
@@ -33,7 +36,15 @@ void dfs_ejemplo() {
 }
 
 void kruskal_ejemplo() {
-
+  //https://www.gatevidyalay.com/kruskals-algorithm-kruskals-algorithm-example/
+  std::vector<conexion> aristas = {
+    {1, 2, 28}, {2, 3, 16}, {3, 4, 12}, {4, 5, 22}, {5, 6, 25}, {6, 1, 10},
+    {5, 7, 24}, {2, 7, 14}, {4, 7, 18}
+  };
+  int numero_de_nodos = 5;
+  GrafoConCosto grafo = GrafoConCosto(aristas, numero_de_nodos); 
+  Kruskal kruskal = Kruskal(grafo);
+  kruskal.correr_kruskal();
 }
 
 int main()

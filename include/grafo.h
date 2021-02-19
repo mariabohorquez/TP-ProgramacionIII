@@ -6,7 +6,7 @@
 struct arista {
     int origen, destino;
 };
- 
+
 class Grafo
 {
   public:
