@@ -9,21 +9,25 @@
 #include <vector>
 #include <queue>
 
+
 /* 
   Aplica krukal y calcula el costo del árbol cobertor mínimo.
 */
 int Kruskal::correr_kruskal() {
-	std::priority_queue< conexion, std::vector<conexion>, std::greater<conexion> > cola
-  // Cola de prioridades (usada como un min-heap) de conexiones.
-  (std::greater<conexion>(), grafo.conexiones);
+  // Cola de prioridades, donde organizamos por costo de la conexion.
+	std::priority_queue< conexion, std::vector<conexion>, std::greater<conexion> > cola(std::greater<conexion>(), grafo.conexiones);
   // Se declara e inicializa un manejador de conjuntos disjuntos.
-	conjuntos_disjuntos componentes(grafo.len());
+	ConjuntosDistintos componentes(grafo.len());
 	int costo_total = 0;
 	while (!cola.empty() || componentes.conjuntos > 1) {
 		conexion actual = cola.top();
 		cola.pop();
 		if (componentes.unir(actual.origen, actual.destino))
-			costo_total += actual.costo;
+    {
+      std::cout << "Unimos al elemento " << actual.origen << " con " << actual.destino << std::endl;
+      costo_total += actual.costo;
+    }
 	}
+  std::cout << "El costo total del árbol cobertor mínimo es: " << costo_total;
 	return costo_total;
 }

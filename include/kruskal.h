@@ -3,14 +3,13 @@
 #include <vector>
 
 // Tipo de datos que representa una estructura de conjuntos disjuntos.
-struct conjuntos_disjuntos {
-	int elementos;
+struct ConjuntosDistintos {
 	int conjuntos;
 	std::vector<int> padre;
 
 	// Constructor del tipo, que inicializa la estructura con n elementos.
-	conjuntos_disjuntos(int n) {
-		elementos = conjuntos = n;
+	ConjuntosDistintos(int n) {
+		conjuntos = n;
 		padre.resize(n);
 		for (int i = 0 ; i < n ; i++)
 			padre[i] = i;
@@ -20,7 +19,8 @@ struct conjuntos_disjuntos {
 	int representante(int elem) {
 		if (padre[elem] == elem)
 			return elem;
-		return padre[elem] = representante(padre[elem]);
+		padre[elem] = representante(padre[elem]);
+    return padre[elem];
 	}
 
 /*
@@ -42,8 +42,8 @@ class Kruskal {
     Kruskal(GrafoConCosto _grafo) : grafo(_grafo) {};
 
     int correr_kruskal();
-
   private:
     // Lista de adyacencias que representa al grafo.
     GrafoConCosto grafo;
+    
 };
