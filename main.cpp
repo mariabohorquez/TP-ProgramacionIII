@@ -49,7 +49,7 @@ void kruskal_ejemplo() {
 }
 
 void ejemplo_diferencia_bfs_dfs() {
-	std::cout
+	std::cout;
 }
 
 int main() {
