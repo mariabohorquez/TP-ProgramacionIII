@@ -48,10 +48,6 @@ void kruskal_ejemplo() {
 	kruskal.correr_kruskal();
 }
 
-void ejemplo_diferencia_bfs_dfs() {
-	std::cout;
-}
-
 int main() {
 	std::cout << "Escoja el ejemplo a correr:" << std::endl
 			  << "[1] BFS" << std::endl
